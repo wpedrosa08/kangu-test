@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import TokenContext from './context/TokenContext';
 
 export default function Form() { 
   const [showForm, setShowForm] = useState(false);
   const [message, setMessage] = useState('');
+  const [token, setToken] = useContext(TokenContext)
 
   useEffect(() => {
     if (showForm) {
@@ -23,7 +25,7 @@ export default function Form() {
           setMessage('');
           setShowForm(true);
         }}>
-          Open chat
+          {token.token}
         </button>
       </>
     );

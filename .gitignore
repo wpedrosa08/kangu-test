@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+.pre-commit-config.yaml
+.npmrc
 /.pnp
 .pnp.js
 
